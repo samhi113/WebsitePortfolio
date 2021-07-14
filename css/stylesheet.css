@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Staatliches&display=swap');
+
+html {
+  background-image: url(https://i.postimg.cc/fLNNn0b4/Lock-Screen.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: 'Open Sans';
+  color: #EEEEEE;
+}
+
+h1{
+  color: #EEEEEE;
+  font-family: 'Staatliches';
+  font-size: 48px;
+  font-weight: normal;
+}
+
+nav {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  font-family: 'Raleway';
+  font-size: 24px;
+  padding-top: 25px;
+  padding-bottom: 33px;
+}
+
+nav ul li {
+  display: inline;
+  border-right: 2px solid #DDDDDD;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  transition: background-color  0.33s  ease-in-out;
+}
+
+.last-child {
+  border-right: 2px solid white;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav ul li:hover, .selected {
+  background-color: rgba(20, 150, 20, 0.5);
+}
+
+.home {
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+}
+
+.hometitle:not(.hometitle > img){
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  background: black;
+  transition: width 1s, opacity 1s;
+  opacity: 1;
+}
+
+.hometitle > img {
+    width: 320px;
+    opacity: 1;
+}
+
+.hometitle:hover, .hometitle:before {
+  width: 0px;
+  opacity: 0;
+}
+
+#about {
+  height: 125px;
+  left: 0;
+}
+
+#aboutme {
+  background-color: white;
+  color: #3C352C;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#aboutme > * > *:not(h1){
+  font-size: 20px;
+}
+
+.aboutmetext {
+  color: #3C352C;
+  padding-left: 25px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.aboutmeimg {
+  height: 800px;
+  left: 0;
+
+}
+
+.projects {
+    height: 1080px;
+    width: 100%;
+    left: 0;
+    background-image: url(https://i.postimg.cc/VvZK4wgy/h.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projects > ul > li {
+  padding-right: 50px
+}
+
+.projects > ul > li > a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 32px;
+}
+
+.projects > ul > li > a:visited {
+  color: white;
+}
+
+.sitelogo {
+  height: 50px;
+  padding-left: 20px;
+}
+
+#contactsec {
+    background-image: url(https://i.postimg.cc/8PcC1vHC/Lock-Screen.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #EBE1D4;
+    height: 600px;
+}
+
+#contacts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 540px;
+}
+
+#contacts > ul {
+  list-style-type: none;
+}
+
+#contacts > ul > li > a {
+  display: flex;
+  align-items: center;
+  color: #EBE1D4;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#contacts > ul > li > a:hover {
+  animation: uAndD infinite ease-in-out 0.75s;
+}
+
+@keyframes uAndD {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, -6px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#contacts > ul > li > a:hover {
+  font-weight: bolder;
+}
+
+#contacts > * > * > * > * > button{
+  border-radius: 100px;
+  color: #EBE1D4;
+  font-family: 'Staatliches';
+  border: 3px solid #EBE1D4;
+  background-color: rgb(0,0,0,0.5);
+  height: 100px;
+  width: 100px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 33px;
+}
+
+#contacts > * > * > * > * > button:hover{
+  border: 5px solid #EBE1D4;
+  cursor: pointer;
+}
+
+#contacts > h1:hover {
+  animation: uAndD infinite 0.75s;
+  cursor: default;
+}
+
+.contactimg {
+  width: 70px;
+}
+
+.contactimgbig {
+  width: 60px;
+}
+
+.bottomcitation {
+  width: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-family: 'Open Sans';
+}
+
+#aboutme > div {
+  padding-left: 25px;
+  padding-right: 25px;
+}
