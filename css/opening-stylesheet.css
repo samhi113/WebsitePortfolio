@@ -36,11 +36,16 @@ button {
   height: 35px;
   font-family: "Arvo";
   font-weight: bold;
+  transition: background-color 0.5s ease-in-out;
 }
 
 button:active {
   background-color: rgb(221, 221, 221, 0.66);
   color: #333333;
+}
+
+button:hover {
+  background-color: rgb(51, 51, 51, 1);
 }
 
 a {
