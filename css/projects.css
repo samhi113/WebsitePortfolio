@@ -17,11 +17,15 @@ html {
   font-family: "Staatliches";
   font-style: italic;
   font-size: 24px;
-  color: white;
+  color: #364041;
 }
 
 .projectsec > ul > li > a:visited {
-  color: white;
+  color: #364041;
+}
+
+.projectsec > ul > li > a {
+  color: #364041;
 }
 
 .projectsec > ul > li > a:hover {
