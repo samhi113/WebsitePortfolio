@@ -2,6 +2,11 @@
 
 html {
   background-image: url("https://i.postimg.cc/TYk41JfW/the-New-Meta.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
 }
 
 .space-top {
