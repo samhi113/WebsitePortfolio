@@ -44,6 +44,7 @@ body {
   color: #364041;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .projectsec > ul > li > a:hover {
@@ -51,6 +52,7 @@ body {
 }
 .projectsec > ul > li > a > img {
   width: 100px;
+  margin-right: 50px;
 }
 
 h2 {
