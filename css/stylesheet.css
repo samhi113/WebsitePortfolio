@@ -214,12 +214,15 @@ nav ul li:hover, .selected {
 }
 
 #contacts > ul > li > a {
-  display: flex;
-  align-items: center;
-  color: #EBE1D4;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #EBE1D4;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
 }
 
 #contacts > ul > li > a:hover {
@@ -240,26 +243,32 @@ nav ul li:hover, .selected {
   }
 }
 
-#contacts > ul > li > a:hover {
-  font-weight: bolder;
-}
-
-#contacts > * > * > * > * > button{
-  border-radius: 100px;
-  color: #EBE1D4;
-  font-family: 'Staatliches';
-  border: 3px solid #EBE1D4;
-  background-color: rgb(0,0,0,0.5);
+#contacts > ul > li > a {
+  background-color: rgba(0,0,0,0.5);
   height: 100px;
-  width: 100px;
+  width: 260px;
+  border: 3px solid #EBE1D4;
+  border-radius: 100px;
   margin-top: 25px;
   margin-bottom: 25px;
   margin-right: 33px;
 }
 
-#contacts > * > * > * > * > button:hover{
+#contacts > ul > li > a:hover {
+  font-weight: bolder;
   border: 5px solid #EBE1D4;
   cursor: pointer;
+}
+
+#contacts > * > * > * > * > button{
+  border-radius: 100px;
+  border: 0px solid #EBE1D4;
+  background-color: rgb(0,0,0,0);
+  height: 100px;
+  width: 100px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 33px;
 }
 
 #contacts > h1:hover {

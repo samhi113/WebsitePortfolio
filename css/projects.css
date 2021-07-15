@@ -26,19 +26,31 @@ body {
   font-family: "Staatliches";
   font-style: italic;
   font-size: 24px;
-  color: #364041;
+  background-color: rgba(191, 213, 217, 0.5);
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.projectsec > ul {
+  list-style-type: none;
 }
 
 .projectsec > ul > li > a:visited {
   color: #364041;
 }
 
+
 .projectsec > ul > li > a {
   color: #364041;
+  display: flex;
+  align-items: center;
 }
 
 .projectsec > ul > li > a:hover {
   font-weight: bold;
+}
+.projectsec > ul > li > a > img {
+  width: 100px;
 }
 
 h2 {
