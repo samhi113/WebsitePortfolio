@@ -23,6 +23,10 @@ body {
   color: #EEEEEE;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 h1{
   color: #EEEEEE;
   font-family: 'Staatliches';
@@ -122,14 +126,25 @@ nav ul li:hover, .selected {
   padding-left: 25px;
 }
 
-.bold {
-  font-weight: bold;
+#aboutme > div {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .aboutmeimg {
   height: 800px;
   left: 0;
 
+}
+
+.projectadj {
+  height: 56px;
+  display: flex;
+}
+
+#projects {
+  height: 135px;
+  display: flex;
 }
 
 .projects {
@@ -254,16 +269,23 @@ nav ul li:hover, .selected {
   width: 60px;
 }
 
-.bottomcitation {
-  width: 100%;
-  left: 0;
-  background-color: white;
-  color: black;
+.footer {
+  margin-left: 5px;
+  width: 155px;
   font-weight: bold;
-  font-family: 'Open Sans';
+  font-style: italic;
+  transition: background-color 5s;
+  color: #EBE1D4;
+  text-decoration: none;
 }
 
-#aboutme > div {
-  padding-left: 25px;
-  padding-right: 25px;
+.footer > a {
+  color: #EBE1D4;
+  text-decoration: none; 
+  cursor: default;
+}
+
+.footer:hover{
+  cursor: default;
+  background-color: rgba(0,0,0,0.5);
 }
