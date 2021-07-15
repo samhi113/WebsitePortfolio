@@ -9,6 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  padding-left: 25px;
+}
+
 .space-top {
   height: 135px;
 }
@@ -39,8 +43,12 @@ html {
 
 h2 {
   font-size: 48px;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: bold;
+  background-color: #364041;
+  color: #BFD5D9;
+  width: 950px;
+  border-radius: 10px;
 }
 
 nav {
