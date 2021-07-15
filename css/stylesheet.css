@@ -82,7 +82,17 @@ nav ul li:hover, .selected {
   justify-content: center;
 }
 
-.hometitle:not(.hometitle > img){
+.hometitle > img {
+    width: 320px;
+    opacity: 1;
+}
+
+.hometitle > img:hover {
+    width: 320px;
+    opacity: 1;
+}
+
+.hometitle {
   display: flex;
   align-self: center;
   justify-content: center;
@@ -92,12 +102,7 @@ nav ul li:hover, .selected {
   opacity: 1;
 }
 
-.hometitle > img {
-    width: 320px;
-    opacity: 1;
-}
-
-.hometitle:hover, .hometitle:before {
+.hometitle:hover {
   width: 0px;
   opacity: 0;
 }

@@ -39,6 +39,8 @@ html {
 
 h2 {
   font-size: 48px;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 nav {
