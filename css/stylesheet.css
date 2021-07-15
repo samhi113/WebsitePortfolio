@@ -167,7 +167,7 @@ nav ul li:hover, .selected {
 }
 
 .projects > ul > li {
-  padding-right: 50px
+  padding-right: 150px;
 }
 
 .projects > ul > li > a {
@@ -214,6 +214,7 @@ nav ul li:hover, .selected {
   color: #EBE1D4;
   font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 #contacts > ul > li > a:hover {
@@ -281,7 +282,7 @@ nav ul li:hover, .selected {
 
 .footer > a {
   color: #EBE1D4;
-  text-decoration: none; 
+  text-decoration: none;
   cursor: default;
 }
 
