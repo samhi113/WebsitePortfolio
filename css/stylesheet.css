@@ -275,15 +275,18 @@ nav ul li:hover, .selected {
   width: 260px;
   border: 3px solid #EBE1D4;
   border-radius: 100px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-right: 33px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  margin-right: 34px;
 }
 
 #contacts > ul > li > a:hover {
   font-weight: bolder;
   border: 5px solid #EBE1D4;
   cursor: pointer;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-right: 32px;
 }
 
 #contacts > * > * > * > * > button{
