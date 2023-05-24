@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap');
+
+:root {
+    --near-black: #222;
+    --near-white: #ddd;
+    --sea-blue: #0af;
+    --dark-sea-blue: #058;
+
+    --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
+}
+
+html {
+    background-color: var(--near-white);
+
+    font-family: 'Space Grotesk', 'Cabin', sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+nav {
+    height: 15vw;
+    max-height: 175px;
+    width: 100vw;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+}
+
+nav > div > a {
+    text-decoration: none;
+}
+
+nav > div > a > div {
+    width: 15vw;
+    max-width: 500px;
+
+    height: 4vh;
+    max-height: 175px;
+
+    color: var(--near-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#siteLogo {
+    width: 10vw;
+    height: 10vw;
+    border-bottom-right-radius: 2.5vw;
+
+    background-color: var(--near-black);
+    background-image: url("https://i.postimg.cc/DwCZHsNb/S-Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: background-image 0.25s ease-in-out;
+}
+
+#siteLogo:hover {
+    background-image: url("https://i.postimg.cc/02PyNcRw/H-Logo.png");
+}
+
+#navBack {
+    width: 90vw;
+    height: 6vh;
+
+    background-color: var(--near-black);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navButton {
+    background-image: url("https://i.postimg.cc/26sXZKxY/nav-Background.png");
+    background-size: 350%;
+    background-position: right;
+
+    height: 6vh;
+
+    font-family: 'Cabin';
+    font-weight: 400;
+    font-size: 2.5vh;
+
+    transition: background-position 0.25s ease-in-out, font-size 0.25s ease-in-out;
+}
+
+.navButton:hover {
+    background-position: left;
+    font-size: 2.75vh;
+}
+
+#homeSection {
+    width: 100%;
+    height: 95vh;
+
+    margin-top: 10vh;
+    
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Text Stuff */
+    font-size: 20vw;
+    line-height: 0.69em;
+    font-style: italic;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-image: url("https://picsum.photos/1920/1080");
+    animation: homeOnLoad 2.5s var(--quick-in);
+}
+
+@keyframes homeOnLoad {
+    from {transform: translateY(3%); opacity: 0%;}
+    to {transform: translateY(0%); opacity: 100%;}
+}
+
+#aboutMe {
+    left: 0;
+    position: absolute;
+    width: 75vw;
+    height: 50em;
+
+    margin-top: 5vh;
+    padding-top: 0;
+    padding-left: 10vw;
+    padding-right: 2vw;
+    
+    background-color: var(--near-black);
+    color: var(--near-white);
+    font-family: 'Cabin';
+    font-size: 2em;
+    line-height: 1.25em;
+    word-wrap: break-word;
+}
+
+#aboutMe > h2 {
+    font-size: 2em;
+    font-style: italic;
+    font-family: 'Space Grotesk';
+
+    line-height: 0;
+    color: var(--sea-blue);
+}
+
+#work {
+    top: 195vh;
+    right: 0;
+    position: absolute;
+    width: 75vw;
+    background-color: var(--sea-blue);
+
+    margin-top: 5vh;
+    
+    color: var(--near-black);
+    font-family: 'Cabin';
+    font-size: 2em;
+    line-height: 1.25em;
+    word-wrap: break-word;
+}
+
+#work > h2 {
+    padding-top: 0;
+    padding-left: 5vw;
+    padding-right: 2vw;
+    
+    font-size: 2em;
+    font-style: italic;
+    font-family: 'Space Grotesk';
+
+    line-height: 0;
+}
+
+#workSecContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    height: 50vh;
+}
+
+.workSec {
+    width: 75vw;
+    height: 15vh;
+
+    background-image: url("https://picsum.photos/1920/720");
+    background-size: cover;
+    background-position: top;
+
+    font-size: 1em;
+    color: var(--near-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: auto;
+    transition: font-size 1s var(--quick-in), height 1s var(--quick-in), background-position 1s var(--quick-in);
+}
+
+.workSec > p {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workSec:hover {
+    height: 20vh;
+    font-size: 1.15em;
+    background-position: bottom;
+}
+
+.workSec:not(.workSec:hover){
+    height: calc(50vh/3);
+}
+
+#workExp {
+    background-image: url("https://i.postimg.cc/65LkFNtG/work-Exp-Background.png");
+}
+
+#github {
+    background-image: url("https://i.postimg.cc/BnTppx9T/github-Background.png");
+}
