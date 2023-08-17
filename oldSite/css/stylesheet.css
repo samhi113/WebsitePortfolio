@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Staatliches&display=swap');
+
+html {
+  background-image: url(https://i.postimg.cc/fLNNn0b4/Lock-Screen.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: 'Open Sans';
+  color: #EEEEEE;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h1{
+  color: #EEEEEE;
+  font-family: 'Staatliches';
+  font-size: 48px;
+  font-weight: normal;
+}
+
+nav {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  font-family: 'Raleway';
+  font-size: 24px;
+  padding-top: 25px;
+  padding-bottom: 33px;
+}
+
+nav ul li {
+  display: inline;
+  border-right: 2px solid #DDDDDD;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  transition: background-color  0.33s  ease-in-out;
+}
+
+.last-child {
+  border-right: 2px solid white;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav ul li:hover, .selected {
+  background-color: rgba(20, 150, 20, 0.5);
+}
+
+.home {
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+}
+
+.hometitle > img {
+    width: 320px;
+    opacity: 1;
+}
+
+.hometitle > img:hover {
+    width: 320px;
+    opacity: 1;
+}
+
+.hometitle {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  background: black;
+  transition: width 1s, opacity 1s;
+  opacity: 1;
+}
+
+.hometitle:hover {
+  width: 0px;
+  opacity: 0;
+}
+
+#about {
+  height: 125px;
+  left: 0;
+}
+
+#aboutme {
+  background-color: white;
+  color: #3C352C;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#aboutme > * > *:not(h1){
+  font-size: 20px;
+}
+
+.aboutmetext {
+  color: #3C352C;
+  padding-left: 25px;
+}
+
+#aboutme > div {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.aboutmeimg {
+  height: 800px;
+  left: 0;
+
+}
+
+.projectadj {
+  height: 56px;
+  display: flex;
+}
+
+#projects {
+  height: 135px;
+  display: flex;
+}
+
+.projects {
+    height: 1080px;
+    width: 100%;
+    left: 0;
+    background-image: url(https://i.postimg.cc/VvZK4wgy/h.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projpiclist {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+}
+
+.projpic {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  border: 0px solid white;
+  margin: 3px;
+}
+
+.projpic:hover {
+  border: 3px white solid;
+  margin: 0px;
+}
+
+.projects > div > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.projects > div > ul > li {
+  width: 400px;
+}
+
+.projects > div > ul > li > a:hover {
+  font-weight: bold;
+}
+
+.projects > div > ul > li > a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.projects > div > ul > li > a:visited {
+  color: white;
+}
+
+.sitelogo {
+  height: 50px;
+  padding-left: 20px;
+}
+
+#contactsec {
+    background-image: url(https://i.postimg.cc/8PcC1vHC/Lock-Screen.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #EBE1D4;
+    height: 600px;
+}
+
+#contacts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 540px;
+}
+
+#contacts > ul {
+  list-style-type: none;
+}
+
+#contacts > ul > li > a {
+    display: flex;
+    align-items: center;
+    color: #EBE1D4;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+}
+
+#contacts > ul > li > a:hover {
+  animation: uAndD infinite ease-in-out 0.75s;
+}
+
+@keyframes uAndD {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, -6px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#contacts > ul > li > a {
+  background-color: rgba(0,0,0,0.5);
+  height: 100px;
+  width: 260px;
+  border: 3px solid #EBE1D4;
+  border-radius: 100px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  margin-right: 34px;
+}
+
+#contacts > ul > li > a:hover {
+  font-weight: bolder;
+  border: 5px solid #EBE1D4;
+  cursor: pointer;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-right: 32px;
+}
+
+#contacts > * > * > * > * > button{
+  border-radius: 100px;
+  border: 0px solid #EBE1D4;
+  background-color: rgba(0,0,0,0);
+  height: 100px;
+  width: 100px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 33px;
+}
+
+#contacts > h1:hover {
+  animation: uAndD infinite 0.75s;
+  cursor: default;
+}
+
+.contactimg {
+  width: 70px;
+}
+
+.contactimgbig {
+  width: 60px;
+}
+
+.footer {
+  margin-left: 5px;
+  width: 155px;
+  font-weight: bold;
+  font-style: italic;
+  transition: background-color 5s;
+  color: #EBE1D4;
+  text-decoration: none;
+}
+
+.footer > a {
+  color: #EBE1D4;
+  text-decoration: none;
+  cursor: default;
+}
+
+.footer:hover{
+  cursor: default;
+  background-color: rgba(0,0,0,0.5);
+}

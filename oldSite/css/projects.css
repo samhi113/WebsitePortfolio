@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Staatliches&display=swap');
+
+html {
+  background-image: url("https://i.postimg.cc/TYk41JfW/the-New-Meta.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-left: 25px;
+}
+
+.space-top {
+  height: 135px;
+}
+
+.sitelogo {
+  height: 50px;
+  padding-left: 20px;
+}
+
+.projectsec {
+  font-family: "Staatliches";
+  font-style: italic;
+  font-size: 24px;
+  background-color: rgba(191, 213, 217, 0.5);
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.projectsec > ul {
+  list-style-type: none;
+}
+
+.projectsec > ul > li > a:visited {
+  color: #364041;
+}
+
+
+.projectsec > ul > li > a {
+  color: #364041;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.projectsec > ul > li > a:hover {
+  font-weight: bold;
+}
+.projectsec > ul > li > a > img {
+  width: 100px;
+  margin-right: 50px;
+}
+
+h2 {
+  font-size: 48px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #364041;
+  color: #BFD5D9;
+  width: 950px;
+  border-radius: 10px;
+}
+
+nav {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  font-family: 'Raleway';
+  font-size: 24px;
+  padding-top: 25px;
+  padding-bottom: 33px;
+}
+
+nav ul li {
+  display: inline;
+  border-right: 2px solid #DDDDDD;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  transition: background-color  0.25s  ease-in-out;
+}
+
+.last-child {
+  border-right: 2px solid white;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav ul li:hover, .selected {
+  background-color: rgba(20, 150, 20, 0.5);
+  cursor: pointer;
+}
