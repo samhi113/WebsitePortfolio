@@ -117,20 +117,23 @@ nav > div > a > div {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    background-image: url("https://picsum.photos/1920/1080");
-    animation: homeOnLoad 2.5s var(--quick-in);
+    background-image: url("https://i.postimg.cc/tTYwyKrN/Untitled-drawing.png");
+    background-size: 200vw;
+    background-position-x: left;
+    animation: homeWordAnim 10s ease-in-out 0s infinite;
 }
 
-@keyframes homeOnLoad {
-    from {transform: translateY(3%); opacity: 0%;}
-    to {transform: translateY(0%); opacity: 100%;}
+@keyframes homeWordAnim {
+    0% {background-position-x: left;}
+    50% {background-position-x: right;}
+    100% {background-position-x: left;}
 }
 
 #aboutMe {
     left: 0;
     position: absolute;
     width: 75vw;
-    height: 50em;
+    height: 40em;
 
     margin-top: 5vh;
     padding-top: 0;
@@ -196,7 +199,7 @@ nav > div > a > div {
 
     background-image: url("https://picsum.photos/1920/720");
     background-size: cover;
-    background-position: top;
+    background-position-y: 45%;
 
     font-size: 1em;
     color: var(--near-white);
@@ -206,7 +209,7 @@ nav > div > a > div {
     justify-content: center;
 
     pointer-events: auto;
-    transition: font-size 1s var(--quick-in), height 1s var(--quick-in), background-position 1s var(--quick-in);
+    transition: font-size 1s var(--quick-in), height 1s var(--quick-in), background-position-y 1s var(--quick-in);
 }
 
 .workSec > p {
@@ -221,7 +224,7 @@ nav > div > a > div {
 .workSec:hover {
     height: 20vh;
     font-size: 1.15em;
-    background-position: bottom;
+    background-position-y: 55%;
 }
 
 .workSec:not(.workSec:hover){
