@@ -11,17 +11,66 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    
     html {
         background-color: var(--off-gray);
     }
 
+    .navButton {
+        background: rgb(0,170,255);
+        background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-black) 67%);
+    }
 
+    #navBack {
+        background-color: var(--near-black);
+        border-bottom: var(--near-white) 0.25vh solid;
+    }
+
+    nav > div > a > div {
+        color: var(--near-white);
+    }
+
+    #siteLogo {
+        background-image: url("https://i.postimg.cc/DwCZHsNb/S-Logo.png");
+    
+        transition: background-image 0.25s ease-in-out;
+    }
+    
+    #siteLogo:hover {
+        background-image: url("https://i.postimg.cc/02PyNcRw/H-Logo.png");
+    }
 } /* End of Dark Mode CSS */
 
-html {
-    background-color: var(--near-white);
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: var(--near-white);
+    }
 
+    .navButton {
+        background: rgb(0,170,255);
+        background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-white) 67%);
+    } 
+
+    #navBack {
+        background-color: var(--near-white);
+        border-bottom: var(--near-black) 0.25vh solid;
+    }
+
+    nav > div > a > div {
+        color: var(--near-black);
+    }
+
+    #siteLogo {
+        background-image: url("https://i.postimg.cc/8cDCcMnw/S-Dark-Logo.png");
+    
+        transition: background-image 0.25s ease-in-out;
+    }
+    
+    #siteLogo:hover {
+        background-image: url("https://i.postimg.cc/HW4xKvVN/H-Dark-Logo.png");
+    }
+} /* End of Light Mode CSS */
+
+html {
     font-family: 'Space Grotesk', 'Cabin', sans-serif;
 
     scroll-behavior: smooth;
@@ -57,8 +106,6 @@ nav > div > a > div {
     height: 4vh;
     max-height: 175px;
 
-    color: var(--near-white);
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,23 +117,14 @@ nav > div > a > div {
     border-bottom-right-radius: 2.5vw;
 
     background-color: var(--near-black);
-    background-image: url("https://i.postimg.cc/DwCZHsNb/S-Logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
-    transition: background-image 0.25s ease-in-out;
-}
-
-#siteLogo:hover {
-    background-image: url("https://i.postimg.cc/02PyNcRw/H-Logo.png");
 }
 
 #navBack {
     width: 90vw;
     height: 6vh;
-
-    background-color: var(--near-black);
 
     display: flex;
     align-items: center;
@@ -94,7 +132,6 @@ nav > div > a > div {
 }
 
 .navButton {
-    background-image: url("https://i.postimg.cc/26sXZKxY/nav-Background.png");
     background-size: 350%;
     background-position: right;
 
@@ -130,6 +167,7 @@ nav > div > a > div {
     font-style: italic;
     font-weight: bold;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     background-image: url("https://i.postimg.cc/SNJG4Wkh/Word-Art-Back.png");
