@@ -2,12 +2,22 @@
 
 :root {
     --near-black: #222;
+    --off-gray: #444;
     --near-white: #ddd;
     --sea-blue: #0af;
     --dark-sea-blue: #058;
 
     --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
 }
+
+@media (prefers-color-scheme: dark) {
+    
+    html {
+        background-color: var(--off-gray);
+    }
+
+
+} /* End of Dark Mode CSS */
 
 html {
     background-color: var(--near-white);
@@ -122,7 +132,7 @@ nav > div > a > div {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    background-image: url("https://i.postimg.cc/tTYwyKrN/Untitled-drawing.png");
+    background-image: url("https://i.postimg.cc/SNJG4Wkh/Word-Art-Back.png");
     background-size: 200vw;
     background-position-x: center;
     animation: homeWordAnim 10s ease-in-out 0s infinite;
@@ -247,33 +257,6 @@ nav > div > a > div {
 
 #projects {
     background-image: url("https://i.postimg.cc/8zRMks6w/Projects-Background.png");
-}
-
-.contactContainer {
-    z-index: -1;
-    background-color: var(--near-white);
-    position: absolute;
-}
-
-#contactTopContainer {
-    top: 200vh;
-    left: 0;
-    width: 100vw;
-    height: 70vh;
-}
-
-#contactSideContainer {
-    top: 260vh;
-    left: 60vw;
-    width: 40vw;
-    height: 95vh;
-}
-
-#contactBotContainer {
-    top: 345vh;
-    left: 0;
-    width: 100vw;
-    height: 70vh;
 }
 
 #contactMe {
