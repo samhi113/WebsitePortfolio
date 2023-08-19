@@ -39,6 +39,15 @@
     #siteLogo:hover {
         background-image: url("https://i.postimg.cc/02PyNcRw/H-Logo.png");
     }
+
+    footer {
+        background-color: var(--near-white);
+        color: var(--near-black);
+    }
+
+    footer > a > p {
+        color: var(--near-black);
+    }
 } /* End of Dark Mode CSS */
 
 @media (prefers-color-scheme: light) {
@@ -47,7 +56,7 @@
     }
 
     .navButton {
-        background: rgb(0,170,255);
+        background: var(--sea-blue);
         background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-white) 67%);
     } 
 
@@ -68,6 +77,15 @@
     
     #siteLogo:hover {
         background-image: url("https://i.postimg.cc/HW4xKvVN/H-Dark-Logo.png");
+    }
+
+    footer {
+        background-color: var(--near-black);
+        color: var(--near-white);
+    }
+
+    footer > a > p {
+        color: var(--near-white);
     }
 } /* End of Light Mode CSS */
 
@@ -142,7 +160,7 @@ nav > div > a > div {
     font-weight: 400;
     font-size: 2.5vh;
 
-    transition: background-position 0.25s ease-in-out, font-size 0.25s ease-in-out;
+    transition: background-position 0.5s ease-in-out, font-size 0.25s ease-in-out;
 }
 
 .navButton:hover {
@@ -329,26 +347,41 @@ nav > div > a > div {
     -webkit-text-fill-color: transparent;
 }
 
+#contactButtonList {
+    height: 55vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 #contactMe > ul > li {
     list-style-type: none;
     text-decoration: none;
-    padding-bottom: 1vh;
+
+    height: 15vh;
 }
 
 #contactMe > ul > li > a {
     color: var(--near-black);
-    transition: all 1s;
-    padding-left: 1vw;
-    padding-right: -20vw;
-    z-index: 1;
+    box-shadow: inset 0 0 0 0 var(--near-black);
+
+    font-size: 1.5em;
+
+    transition: all 1s var(--quick-in);
 }
 
 #contactMe > ul > li > a:hover {
     color: var(--sea-green);
-    padding-right: 1vw;
 
-    background-color: var(--near-black);
-    animation: wordColors 7.5s var(--quick-in) 0ms infinite;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+
+    font-size: 2em;
+
+    box-shadow: inset 5em 0 0 0 var(--near-black);
+
+    animation: wordColors 7.5s linear 1s infinite;
 }
 
 @keyframes wordColors {
@@ -357,23 +390,21 @@ nav > div > a > div {
     100% {color: var(--sea-green);}
 }
 
-.contactHover {
-    color: var(--near-black);
-    background-color: transparent;
-}
-
-.contactHover:hover {
-    color: transparent;
-    background-color: var(--near-black);
-}
-
-#emailHover {
+footer {
     position: absolute;
-    top: 14.65vh;
-    left: 4.5vw;
+    left: 0;
+    top: 360vh;
+    
+    width: 100%;
+    height: 7.5vh;
 
-    z-index: -1;
+    font-size: 4vh;
 
-    width: 9em;
-    height: 1.25em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer > a > p {
+    margin-right: 5vw;
+    line-height: 0;
 }
