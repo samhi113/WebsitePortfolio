@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap');
+
+:root {
+    --near-black: #222;
+    --off-gray: #444;
+    --near-white: #ddd;
+    --sea-blue: #0af;
+    --sea-green: #00f4c8;
+    --dark-sea-blue: #058;
+
+    --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: var(--off-gray);
+    }
+
+    .navButton {
+        background: rgb(0,170,255);
+        background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-black) 67%);
+    }
+
+    #navBack {
+        background-color: var(--near-black);
+        border-bottom: var(--near-white) 0.25vh solid;
+    }
+
+    nav > div > a > div {
+        color: var(--near-white);
+    }
+
+    #siteLogo {
+        background-image: url("https://i.postimg.cc/DwCZHsNb/S-Logo.png");
+    
+        transition: background-image 0.25s ease-in-out;
+    }
+    
+    #siteLogo:hover {
+        background-image: url("https://i.postimg.cc/02PyNcRw/H-Logo.png");
+    }
+
+    .bodySubtitle {
+        border-left: 5px solid var(--near-white);
+    }
+} /* End of Dark Mode CSS */
+
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: var(--near-white);
+    }
+
+    .navButton {
+        background: rgb(0,170,255);
+        background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-white) 67%);
+    } 
+
+    #navBack {
+        background-color: var(--near-white);
+        border-bottom: var(--near-black) 0.25vh solid;
+    }
+
+    nav > div > a > div {
+        color: var(--near-black);
+    }
+
+    #siteLogo {
+        background-image: url("https://i.postimg.cc/8cDCcMnw/S-Dark-Logo.png");
+    
+        transition: background-image 0.25s ease-in-out;
+    }
+    
+    #siteLogo:hover {
+        background-image: url("https://i.postimg.cc/HW4xKvVN/H-Dark-Logo.png");
+    }
+
+    .bodySubtitle {
+        border-left: 5px solid var(--near-black);
+    }
+} /* End of Light Mode CSS */
+
+html {
+    font-family: 'Space Grotesk', 'Cabin', sans-serif;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    height: 15vw;
+    max-height: 175px;
+    width: 100vw;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+}
+
+nav > div > a {
+    text-decoration: none;
+}
+
+nav > div > a > div {
+    width: 15vw;
+    max-width: 500px;
+
+    height: 4vh;
+    max-height: 175px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#siteLogo {
+    width: 10vw;
+    height: 10vw;
+    border-bottom-right-radius: 2.5vw;
+
+    background-color: var(--near-black);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#navBack {
+    width: 90vw;
+    height: 6vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navButton {
+    background-size: 350%;
+    background-position: right;
+
+    height: 6vh;
+
+    font-family: 'Cabin';
+    font-weight: 400;
+    font-size: 2.5vh;
+
+    transition: background-position 0.25s ease-in-out, font-size 0.25s ease-in-out;
+}
+
+.navButton:hover {
+    background-position: left;
+    font-size: 2.75vh;
+}
+
+#headerSection {
+    background-image: linear-gradient(90deg, var(--sea-green) 33%, var(--sea-blue) 67%);
+    background-size: 200vw;
+    background-position-x: center;
+    animation: headerAnim 10s ease-in-out 0s infinite;
+    
+    font-family: "Space Grotesk";
+    font-size: 10vh;
+    font-weight: bold;
+
+    height: 25vh;
+    width: 100vw;
+
+    position: absolute;
+    top: 6vh;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes headerAnim {
+    25% {background-position-x: left;}
+    75% {background-position-x: right;}
+}
+
+#bodyOfText{
+    position: absolute;
+    top: 33vh;
+    left: 15vw;
+
+    width: 70vw;
+
+    font-family: "Cabin", "Space Grotesk", "Sans Serif", "Serif";
+    font-size: 1.5em;
+    font-size-adjust: auto;
+    text-align: justify;
+}
+
+.bodySubtitle {
+    font-weight: bold;
+    font-size: 2em;
+
+    margin: 0;
+    margin-left: 2.5vw;
+    padding-left: 0.5vw;
+}
+
+#bodyOfText > .wrapImgRight {
+    float: right;
+    width: 30vw;
+    margin: 1vw;
+    margin-right: -10vw;
+
+    transform-origin: 50% 50%;
+    transition: transform var(--quick-in) 0.5s;
+}
+
+#bodyOfText > .wrapImgRight:hover {
+    transform: scale(1.05);
+    width: 30vw;
+}
