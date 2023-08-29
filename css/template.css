@@ -5,20 +5,37 @@
     --off-gray: #444;
     --near-white: #ddd;
     --sea-blue: #0af;
-    --sea-green: #00f4c8;
+    --sea-green: #0fa;
     --dark-sea-blue: #058;
 
     --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
 }
 
+@keyframes wordColors {
+    0% {color: var(--sea-green);}
+    50% {color: var(--sea-blue);}
+    100% {color: var(--sea-green);}
+}
+
 @media (prefers-color-scheme: dark) {
     html {
         background-color: var(--off-gray);
+        color: var(--near-white);
+    }
+
+    ::-moz-selection {
+        color: var(--sea-green);
+        animation: wordColors 7.5s linear 1s infinite;
+    }
+      
+    ::selection {
+        color: var(--sea-green);
+        animation: wordColors 7.5s linear 1s infinite;
     }
 
     .navButton {
         background: rgb(0,170,255);
-        background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-black) 67%);
+        background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-black) 67%);
     }
 
     #navBack {
@@ -48,11 +65,12 @@
 @media (prefers-color-scheme: light) {
     html {
         background-color: var(--near-white);
+        color: var(--near-black);
     }
 
     .navButton {
         background: rgb(0,170,255);
-        background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-white) 67%);
+        background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-white) 67%);
     } 
 
     #navBack {
@@ -84,6 +102,8 @@ html {
 
     scroll-behavior: smooth;
     scroll-padding-top: 10vh;
+
+    transition: all 1s var(--quick-in);
 }
 
 a {
@@ -141,7 +161,7 @@ nav > div > a > div {
 }
 
 .navButton {
-    background-size: 350%;
+    background-size: 400%;
     background-position: right;
 
     height: 6vh;
@@ -150,12 +170,13 @@ nav > div > a > div {
     font-weight: 400;
     font-size: 2.5vh;
 
-    transition: background-position 0.25s ease-in-out, font-size 0.25s ease-in-out;
+    transition: all 1s var(--quick-in);
 }
 
 .navButton:hover {
     background-position: left;
     font-size: 2.75vh;
+    color: var(--near-black);
 }
 
 #headerSection {
@@ -167,6 +188,7 @@ nav > div > a > div {
     font-family: "Space Grotesk";
     font-size: 10vh;
     font-weight: bold;
+    color: var(--near-black);
 
     height: 25vh;
     width: 100vw;
@@ -210,14 +232,53 @@ nav > div > a > div {
 #bodyOfText > .wrapImgRight {
     float: right;
     width: 30vw;
+    height: 16.875vw;
     margin: 1vw;
     margin-right: -10vw;
 
-    transform-origin: 50% 50%;
-    transition: transform var(--quick-in) 0.5s;
+    background-size: 100%;
+    background-position: center;
+
+    border-radius: 1vw;
+
+    transition: all var(--quick-in) 0.5s;
 }
 
 #bodyOfText > .wrapImgRight:hover {
-    transform: scale(1.05);
-    width: 30vw;
+    background-size: 125%;
+    border-radius: 3vw;
+    cursor: pointer;
+}
+
+#endingCarousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 30vw;
+}
+
+.endCarPart {
+    width: 100%;
+    margin: 2.5%;
+    aspect-ratio: 1;
+
+    font-family: "Space Grotesk";
+    font-size: 1.25em;
+
+    background-size: fill;
+    background-position: center;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    transition: all var(--quick-in) 0.5s;
+}
+
+.endCarPart:hover {
+    width: 117.5%;
+    margin: 0%;
+    font-size: 1.5em;
 }
