@@ -23,14 +23,18 @@
         color: var(--near-white);
     }
 
+    a.underlineLink {
+        color: var(--near-white);
+    }
+
     ::-moz-selection {
-        color: var(--sea-green);
-        animation: wordColors 7.5s linear 1s infinite;
+        color: var(--near-black);
+        background-color: var(--near-white);
     }
       
     ::selection {
-        color: var(--sea-green);
-        animation: wordColors 7.5s linear 1s infinite;
+        color: var(--near-black);
+        background-color: var(--near-white);
     }
 
     .navButton {
@@ -68,8 +72,22 @@
         color: var(--near-black);
     }
 
+    a.underlineLink {
+        color: var(--near-black);
+    }
+
+    ::-moz-selection {
+        color: var(--near-white);
+        background-color: var(--near-black);
+    }
+      
+    ::selection {
+        color: var(--near-white);
+        background-color: var(--near-black);
+    }
+
     .navButton {
-        background: rgb(0,170,255);
+        background: var(--sea-blue);
         background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-white) 67%);
     } 
 
@@ -108,6 +126,15 @@ html {
 
 a {
     text-decoration: none;
+}
+
+a.underlineLink {
+    text-decoration: underline;
+}
+
+a.underlineLink:hover {
+    color: var(--sea-green);
+    animation: wordColors 5s linear 0s infinite;
 }
 
 nav {
@@ -207,6 +234,12 @@ nav > div > a > div {
     75% {background-position-x: right;}
 }
 
+@keyframes wordColors {
+    0% {color: var(--sea-green);}
+    50% {color: var(--sea-blue);}
+    100% {color: var(--sea-green);}
+}
+
 #bodyOfText{
     position: absolute;
     top: 33vh;
@@ -229,12 +262,14 @@ nav > div > a > div {
     padding-left: 0.5vw;
 }
 
-#bodyOfText > .wrapImgRight {
-    float: right;
+#bodyOfText > p:not(.bodySubtitle) {
+    min-height: 11em;
+}
+
+#bodyOfText > .wrapImg {
     width: 30vw;
     height: 16.875vw;
     margin: 1vw;
-    margin-right: -10vw;
 
     background-size: 100%;
     background-position: center;
@@ -244,7 +279,17 @@ nav > div > a > div {
     transition: all var(--quick-in) 0.5s;
 }
 
-#bodyOfText > .wrapImgRight:hover {
+#bodyOfText > .wrapImgRight {
+    float: right;
+    margin-right: -10vw;
+}
+
+#bodyOfText > .wrapImgLeft {
+    float: left;
+    margin-left: -10vw;
+}
+
+#bodyOfText > .wrapImg:hover {
     background-size: 125%;
     border-radius: 3vw;
     cursor: pointer;
