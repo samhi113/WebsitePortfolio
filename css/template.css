@@ -264,8 +264,8 @@ nav > div > a > div {
     padding-left: 0.5vw;
 }
 
-#bodyOfText > p:not(.bodySubtitle) {
-    min-height: 11em;
+#bodyOfText > p:not(.bodySubtitle, .textOnlySec) {
+    min-height: 17.5vw;
 }
 
 #bodyOfText > .wrapImg {
