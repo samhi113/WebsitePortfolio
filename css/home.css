@@ -17,8 +17,8 @@
     }
 
     .navButton {
-        background: rgb(0,170,255);
-        background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-black) 67%);
+        background: var(--sea-blue);
+        background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-black) 67%);
     }
 
     #navBack {
@@ -57,8 +57,8 @@
 
     .navButton {
         background: var(--sea-blue);
-        background: linear-gradient(90deg, var(--sea-blue) 33%, var(--near-white) 67%);
-    } 
+        background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-white) 67%);
+    }
 
     #navBack {
         background-color: var(--near-white);

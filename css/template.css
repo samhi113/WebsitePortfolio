@@ -38,7 +38,7 @@
     }
 
     .navButton {
-        background: rgb(0,170,255);
+        background: var(--sea-blue);
         background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-black) 67%);
     }
 
