@@ -11,107 +11,33 @@
     --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
 }
 
-@keyframes wordColors {
-    0% {color: var(--sea-green);}
-    50% {color: var(--sea-blue);}
-    100% {color: var(--sea-green);}
-}
-
 @media (prefers-color-scheme: dark) {
     html {
         background-color: var(--off-gray);
-        color: var(--near-white);
     }
 
-    a.underlineLink {
-        color: var(--near-white);
-    }
-
-    ::-moz-selection {
-        color: var(--near-black);
+    footer {
         background-color: var(--near-white);
-    }
-      
-    ::selection {
         color: var(--near-black);
-        background-color: var(--near-white);
     }
 
-    .navButton {
-        background: var(--sea-blue);
-        background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-black) 67%);
-    }
-
-    #navBack {
-        background-color: var(--near-black);
-        border-bottom: var(--near-white) 0.25vh solid;
-    }
-
-    nav > div > a > div {
-        color: var(--near-white);
-    }
-
-    #siteLogo {
-        background-image: url("https://i.postimg.cc/DwCZHsNb/S-Logo.png");
-    
-        transition: background-image 0.25s ease-in-out;
-    }
-    
-    #siteLogo:hover {
-        background-image: url("https://i.postimg.cc/02PyNcRw/H-Logo.png");
-    }
-
-    .bodySubtitle {
-        border-left: 5px solid var(--near-white);
+    footer > a {
+        content: url("https://i.postimg.cc/N0pptLvn/Up-Button-Dark-on-Light.png");
     }
 } /* End of Dark Mode CSS */
 
 @media (prefers-color-scheme: light) {
     html {
         background-color: var(--near-white);
-        color: var(--near-black);
     }
 
-    a.underlineLink {
-        color: var(--near-black);
-    }
-
-    ::-moz-selection {
-        color: var(--near-white);
+    footer {
         background-color: var(--near-black);
-    }
-      
-    ::selection {
         color: var(--near-white);
-        background-color: var(--near-black);
     }
 
-    .navButton {
-        background: var(--sea-blue);
-        background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-white) 67%);
-    } 
-
-    #navBack {
-        background-color: var(--near-white);
-        border-bottom: var(--near-black) 0.25vh solid;
-    }
-
-    nav > div > a > div {
-        color: var(--near-black);
-    }
-
-    #siteLogo {
-        background-image: url("https://i.postimg.cc/8cDCcMnw/S-Dark-Logo.png");
-    
-        transition: background-image 0.25s ease-in-out;
-    }
-    
-    #siteLogo:hover {
-        background-image: url("https://i.postimg.cc/HW4xKvVN/H-Dark-Logo.png");
-    }
-
-    .bodySubtitle {
-        border-left: 5px solid var(--near-black);
+    footer > a {
+        content: url("https://i.postimg.cc/26yTSmzS/Up-Button-Light-on-Dark.png");
     }
 } /* End of Light Mode CSS */
 
@@ -119,23 +45,11 @@ html {
     font-family: 'Space Grotesk', 'Cabin', sans-serif;
 
     scroll-behavior: smooth;
-    scroll-padding-top: 7.75vh;
-
-    transition: all 1s var(--quick-in);
+    scroll-padding-top: 10vh;
 }
 
 a {
     text-decoration: none;
-}
-
-a.underlineLink {
-    text-decoration: underline;
-    transition: all 1s var(--quick-in);
-}
-
-a.underlineLink:hover {
-    color: var(--sea-green);
-    animation: wordColors 5s linear 1s infinite;
 }
 
 nav {
@@ -166,6 +80,8 @@ nav > div > a > div {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    color: var(--near-black);
 }
 
 #siteLogo {
@@ -177,34 +93,49 @@ nav > div > a > div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    background-image: url("https://i.postimg.cc/8cDCcMnw/S-Dark-Logo.png");
+    
+    transition: all 0.25s var(--quick-in);
+
+    border-right: var(--near-white) solid 4px;
+    border-bottom: var(--near-white) solid 4px;
+}
+
+#siteLogo:hover {
+    background-image: url("https://i.postimg.cc/HW4xKvVN/H-Dark-Logo.png");
 }
 
 #navBack {
     width: 90vw;
-    height: 8vh;
+    height: 6vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: var(--near-white);
+    border-bottom: var(--near-black) 4px solid;
 }
 
 .navButton {
-    background-size: 400%;
+    background: var(--sea-blue);
+    background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-white) 67%);
+    background-size: 350%;
     background-position: right;
 
-    height: 8vh;
+    height: 6vh;
 
     font-family: 'Cabin';
     font-weight: 400;
-    font-size: 3vh;
+    font-size: 2.5vh;
 
-    transition: all 1s var(--quick-in);
+    transition: all 0.5s var(--quick-in);
 }
 
 .navButton:hover {
     background-position: left;
-    font-size: 3.5vh;
-    color: var(--near-black);
+    font-size: 2.75vh;
 }
 
 #headerSection {
@@ -233,12 +164,6 @@ nav > div > a > div {
 @keyframes headerAnim {
     25% {background-position-x: left;}
     75% {background-position-x: right;}
-}
-
-@keyframes wordColors {
-    0% {color: var(--sea-green);}
-    50% {color: var(--sea-blue);}
-    100% {color: var(--sea-green);}
 }
 
 #bodyOfText{

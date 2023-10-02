@@ -16,37 +16,13 @@
         background-color: var(--off-gray);
     }
 
-    .navButton {
-        background: var(--sea-blue);
-        background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-black) 67%);
-    }
-
-    #navBack {
-        background-color: var(--near-black);
-        border-bottom: var(--near-white) 0.25vh solid;
-    }
-
-    nav > div > a > div {
-        color: var(--near-white);
-    }
-
-    #siteLogo {
-        background-image: url("https://i.postimg.cc/DwCZHsNb/S-Logo.png");
-    
-        transition: background-image 0.25s ease-in-out;
-    }
-    
-    #siteLogo:hover {
-        background-image: url("https://i.postimg.cc/02PyNcRw/H-Logo.png");
-    }
-
     footer {
         background-color: var(--near-white);
         color: var(--near-black);
     }
 
-    footer > a > p {
-        color: var(--near-black);
+    footer > a {
+        content: url("https://i.postimg.cc/N0pptLvn/Up-Button-Dark-on-Light.png");
     }
 } /* End of Dark Mode CSS */
 
@@ -55,37 +31,13 @@
         background-color: var(--near-white);
     }
 
-    .navButton {
-        background: var(--sea-blue);
-        background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-white) 67%);
-    }
-
-    #navBack {
-        background-color: var(--near-white);
-        border-bottom: var(--near-black) 0.25vh solid;
-    }
-
-    nav > div > a > div {
-        color: var(--near-black);
-    }
-
-    #siteLogo {
-        background-image: url("https://i.postimg.cc/8cDCcMnw/S-Dark-Logo.png");
-    
-        transition: background-image 0.25s ease-in-out;
-    }
-    
-    #siteLogo:hover {
-        background-image: url("https://i.postimg.cc/HW4xKvVN/H-Dark-Logo.png");
-    }
-
     footer {
         background-color: var(--near-black);
         color: var(--near-white);
     }
 
-    footer > a > p {
-        color: var(--near-white);
+    footer > a {
+        content: url("https://i.postimg.cc/26yTSmzS/Up-Button-Light-on-Dark.png");
     }
 } /* End of Light Mode CSS */
 
@@ -128,6 +80,8 @@ nav > div > a > div {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    color: var(--near-black);
 }
 
 #siteLogo {
@@ -139,6 +93,17 @@ nav > div > a > div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    background-image: url("https://i.postimg.cc/8cDCcMnw/S-Dark-Logo.png");
+    
+    transition: all 0.25s var(--quick-in);
+
+    border-right: var(--near-white) solid 4px;
+    border-bottom: var(--near-white) solid 4px;
+}
+
+#siteLogo:hover {
+    background-image: url("https://i.postimg.cc/HW4xKvVN/H-Dark-Logo.png");
 }
 
 #navBack {
@@ -148,9 +113,14 @@ nav > div > a > div {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: var(--near-white);
+    border-bottom: var(--near-black) 4px solid;
 }
 
 .navButton {
+    background: var(--sea-blue);
+    background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-white) 67%);
     background-size: 350%;
     background-position: right;
 
@@ -160,7 +130,7 @@ nav > div > a > div {
     font-weight: 400;
     font-size: 2.5vh;
 
-    transition: background-position 0.5s ease-in-out, font-size 0.25s ease-in-out;
+    transition: all 0.5s var(--quick-in);
 }
 
 .navButton:hover {
@@ -208,7 +178,7 @@ nav > div > a > div {
     height: 40em;
 
     margin-top: 5vh;
-    padding-top: 0;
+    padding-top: 1.5em;
     padding-left: 10vw;
     padding-right: 2vw;
     
@@ -220,13 +190,49 @@ nav > div > a > div {
     word-wrap: break-word;
 }
 
-#aboutMe > h2 {
-    font-size: 2em;
-    font-style: italic;
+#aboutHead {
+    transform: skew(169deg);
+    
+    &:before {
+        background-image: linear-gradient(79deg, var(--sea-blue) 0%, var(--sea-green) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0099ff', endColorstr='#00ff99', GradientType=1 );
+        content: "";
+
+        height: 2em;
+        width: 45%;
+
+        display: block;
+        padding-block-start: 0.95em;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    transition: all 0.5s ease-in-out;
+}
+
+#aboutHead:hover, #aboutTitle:hover > #aboutHead {
+    transform: skew(191deg);
+}
+
+#aboutTitle{
+    font-size: 2.5em;
     font-family: 'Space Grotesk';
+    font-weight: bold;
 
     line-height: 0;
-    color: var(--sea-blue);
+    color: var(--near-black);
+    z-index: 2;
+    position: absolute;
+
+    margin-top: 0.5em;
+    margin-left: 2vw;
+}
+
+.aboutSpace {
+    height: 2em;
 }
 
 #work {
@@ -311,7 +317,7 @@ nav > div > a > div {
     background-image: url("https://i.postimg.cc/BnTppx9T/github-Background.png");
 }
 
-#projects {
+#design {
     background-image: url("https://i.postimg.cc/8zRMks6w/Projects-Background.png");
 }
 
@@ -404,7 +410,8 @@ footer {
     justify-content: flex-end;
 }
 
-footer > a > p {
-    margin-right: 5vw;
-    line-height: 0;
+footer > a {
+    width: 5vh;
+    height: 5vh;
+    padding: 1.25vh;
 }
