@@ -14,7 +14,18 @@
 @media (prefers-color-scheme: dark) {
     html {
         background-color: var(--off-gray);
+        color: var(--near-white);
     }
+
+    ::selection {
+        background-color: var(--near-white);
+        color: var(--near-black);
+    }
+
+    .bodySubtitle {
+        border-left: 0.25vw solid var(--near-white);
+    }
+
 
     footer {
         background-color: var(--near-white);
@@ -24,11 +35,22 @@
     footer > a {
         content: url("https://i.postimg.cc/N0pptLvn/Up-Button-Dark-on-Light.png");
     }
+
 } /* End of Dark Mode CSS */
 
 @media (prefers-color-scheme: light) {
     html {
         background-color: var(--near-white);
+        color: var(--near-black);
+    }
+
+    ::selection {
+        background-color: var(--near-black);
+        color: var(--near-white);
+    }
+
+    .bodySubtitle {
+        border-left: 0.25vw solid var(--near-black);
     }
 
     footer {
@@ -39,6 +61,7 @@
     footer > a {
         content: url("https://i.postimg.cc/26yTSmzS/Up-Button-Light-on-Dark.png");
     }
+
 } /* End of Light Mode CSS */
 
 html {
@@ -198,13 +221,20 @@ nav > div > a > div {
     height: 16.875vw;
     margin: 1vw;
 
-    background-size: 100%;
+    background-size: 110%;
     background-position: center;
 
     border-radius: 0.5vw;
     border-width: 0;
 
     transition: all var(--quick-in) 0.5s;
+}
+
+#bodyOfText > .wrapImg:hover {
+    background-size: 125%;
+    border-radius: 1.75vw;
+    border-width: 0.5vw;
+    cursor: pointer;
 }
 
 #bodyOfText > .wrapImgRight {
@@ -215,13 +245,6 @@ nav > div > a > div {
 #bodyOfText > .wrapImgLeft {
     float: left;
     margin-left: -10vw;
-}
-
-#bodyOfText > .wrapImg:hover {
-    background-size: 125%;
-    border-radius: 1.75vw;
-    border-width: 0.5vw;
-    cursor: pointer;
 }
 
 #endingCarousel {
