@@ -1,0 +1,97 @@
+:root {
+    --near-black: #222;
+    --off-gray: #444;
+    --near-white: #ddd;
+    --sea-blue: #0af;
+    --sea-green: #0fa;
+    --dark-sea-blue: #058;
+
+    --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
+}
+
+nav {
+    height: 15vw;
+    max-height: 175px;
+    width: 100vw;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+}
+
+nav > div > a {
+    text-decoration: none;
+}
+
+nav > div > a > div {
+    width: 15vw;
+    max-width: 500px;
+
+    height: 4vh;
+    max-height: 175px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--near-black);
+}
+
+#siteLogo {
+    width: 10vw;
+    height: 10vw;
+    border-bottom-right-radius: 2.5vw;
+
+    background-color: var(--near-black);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-image: url("https://i.postimg.cc/8cDCcMnw/S-Dark-Logo.png");
+    
+    transition: all 0.25s var(--quick-in);
+
+    border-right: var(--near-white) solid 4px;
+    border-bottom: var(--near-white) solid 4px;
+}
+
+#siteLogo:hover {
+    background-image: url("https://i.postimg.cc/HW4xKvVN/H-Dark-Logo.png");
+}
+
+#navBack {
+    width: 90vw;
+    height: 6vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--near-white);
+    border-bottom: var(--near-black) 4px solid;
+}
+
+.navButton {
+    background: var(--sea-blue);
+    background: linear-gradient(90deg, var(--sea-green) 0%, var(--sea-blue) 33%, var(--near-white) 67%);
+    background-size: 350%;
+    background-position: right;
+
+    height: 6vh;
+
+    font-family: 'Cabin';
+    font-weight: 400;
+    font-size: 2.5vh;
+
+    transition: all 0.5s var(--quick-in);
+}
+
+.navButton:hover {
+    background-position: left;
+    font-size: 2.75vh;
+    font-weight: 500;
+}
