@@ -56,6 +56,12 @@ a {
     text-decoration: none;
 }
 
+::selection {
+    background-color: var(--dark-sea-blue);
+    color: var(--near-white);
+    -webkit-text-stroke-color: var(--near-white);
+}
+
 nav {
     height: 15vw;
     max-height: 175px;
@@ -265,8 +271,9 @@ nav > div > a > div {
     padding-right: 2vw;
     
     font-size: 4vw;
-    font-style: italic;
     font-family: 'Space Grotesk';
+
+    transform: skew(169deg);
 
     line-height: 0;
 }
@@ -297,20 +304,30 @@ nav > div > a > div {
     transition: all 1s var(--quick-in);
 }
 
-.workSec > h2 {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .workSec:hover {
     font-size: 1.15em;
     background-position-y: 55%;
     height: calc(60vh - 3.45em);
     box-shadow: inset 0 0 0 1000px rgba(221, 221, 221, 0.34);
+}
+
+.workSec > h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+
+    color: var(--near-black);
+    background-color: rgba(34, 34, 34, 0);
+    transition: all 1s var(--quick-in);
+}
+
+.workSec:hover > h2 {
+    background-color: rgba(34, 34, 34, 1);
+    color: var(--near-white);
 }
 
 #workExp {

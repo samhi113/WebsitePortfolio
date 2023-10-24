@@ -2,8 +2,9 @@
 
 :root {
     --near-black: #222;
-    --off-gray: #444;
+    --off-black: #444;
     --near-white: #ddd;
+    --off-white: #bbb;
     --sea-blue: #0af;
     --sea-green: #0fa;
     --dark-sea-blue: #058;
@@ -13,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: var(--off-gray);
+        background-color: var(--off-black);
         color: var(--near-white);
     }
 
@@ -245,6 +246,16 @@ nav > div > a > div {
 #bodyOfText > .wrapImgLeft {
     float: left;
     margin-left: -10vw;
+}
+
+#bodyOfText > .linkText > a {
+    color: var(--near-white);
+    text-decoration: underline;
+}
+
+#bodyOfText > .linkText > a:visited:not(:hover) {
+    color: var(--off-white);
+    text-decoration: underline;
 }
 
 #endingCarousel {
