@@ -194,7 +194,7 @@ a {
     font-size: 1.25em;
     color: var(--near-white);
 
-    background-size: fill;
+    background-size: cover;
     background-position: center;
 
     display: flex;
