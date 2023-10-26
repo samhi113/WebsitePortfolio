@@ -31,6 +31,15 @@
         content: url("https://i.postimg.cc/N0pptLvn/Up-Button-Dark-on-Light.png");
     }
 
+    #bodyOfText > .linkText > a, #bodyOfText > p > a {
+        color: var(--off-white);
+        text-decoration: underline;
+    }
+    
+    #bodyOfText > .linkText > a:hover, #bodyOfText > p > a:hover {
+        color: var(--near-white);
+        text-decoration: underline;
+    }
 } /* End of Dark Mode CSS */
 
 @media (prefers-color-scheme: light) {
@@ -52,6 +61,15 @@
         content: url("https://i.postimg.cc/26yTSmzS/Up-Button-Light-on-Dark.png");
     }
 
+    #bodyOfText > .linkText > a, #bodyOfText > p > a {
+        color: var(--off-black);
+        text-decoration: underline;
+    }
+    
+    #bodyOfText > .linkText > a:hover, #bodyOfText > p > a:hover {
+        color: var(--near-black);
+        text-decoration: underline;
+    }
 } /* End of Light Mode CSS */
 
 html {
@@ -156,13 +174,8 @@ a {
     margin-left: -10vw;
 }
 
-#bodyOfText > .linkText > a {
-    color: var(--near-white);
-    text-decoration: underline;
-}
-
-#bodyOfText > .linkText > a:visited:not(:hover) {
-    color: var(--off-white);
+#bodyOfText > .linkText > a:active, #bodyOfText > p > a:active {
+    color: var(--dark-sea-blue);
     text-decoration: underline;
 }
 
@@ -192,8 +205,8 @@ a {
 }
 
 .endCarPart:hover {
-    width: 24vw;
-    margin: 1px;
+    width: 21vw;
+    margin: 1.5vw;
     font-size: 1.5em;
     font-weight: 600;
 }
