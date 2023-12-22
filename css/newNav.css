@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --near-black: #222;
+    --heavy-gold: #543;
+    --dark-gold: #975;
+    --gold: #a86;
+    --light-gold:#cba;
+    --near-white: #ddd;
+
+    --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
+}
+
+html {
+    font-family: "Space Grotesk", "Atkinson Hyperlegible";
+    color: var(--heavy-gold);
+}
+
+nav {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+
+    width: 90vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    height: 2em;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+
+    font-size: 2em;
+    background-color: var(--light-gold);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+}
+
+#siteLogo {
+    height: 2.5em;
+    width: 2.5em;
+    content: url("css/img/siteLogoOrig.png");
+    transition: all 0.5s var(--quick-in);
+}
+
+#siteLogo:hover {
+    content: url("css/img/siteLogoHover.png");
+}
+
+.navSec {
+    padding-right: 1vw;
+    padding-left: 0.25vw;
+    border-left: 0.25vw solid var(--heavy-gold);
+
+    display: none;
+
+    transition: all 0.1s var(--quick-in);
+}
+
+.navSec > a {
+    text-decoration: none;
+    color: var(--heavy-gold);
+}
+
+.navSec:hover {
+    font-weight: 700;
+    border-left-width: 0.4vw;
+    font-size: 1.25em;
+}
+
+#navButton {
+    width: 1em;
+    height: 1em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--heavy-gold);
+    border: 0.5vh solid var(--light-gold);
+    border-radius: 0;
+    cursor: default;
+    content: '<img id="rects" src="css/img/goldRects.png" alt="Menu Button">';
+    transition: all 0.25s var(--quick-in);
+}
+
+.navHover {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    border-radius: 20% !important;
+    cursor: pointer !important;
+    content: '<img id="rects" src="css/img/heavyGoldRects.png" alt="Menu Button">' !important;
+}
+
+#navButton > .rect {
+    background-color: var(--gold);
+    width: 100%;
+    height: 15%;
+    min-height: 5px;
+}
+
+#rects::selection, #siteLogo::selection {
+    background-color: transparent;
+    color: transparent;
+}
