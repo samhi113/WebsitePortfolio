@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --near-black: #222;
+    --heavy-gold: #543;
+    --dark-gold: #975;
+    --gold: #a86;
+    --light-gold:#cba;
+    --near-white: #ddd;
+
+    --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
+}
+
+html {
+    font-family: "Space Grotesk", "Atkinson Hyperlegible";
+    color: var(--heavy-gold);
+
+    background-color: var(--near-white);
+    padding: 0;
+    display: inline;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#home {
+    background-color: var(--light-gold);
+    width: calc(100vw - 2em);
+    height: calc(100vh - 2em);
+    padding: 1em;
+
+    font-size: 4em;
+    line-height: 0;
+    font-weight: 700;
+
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#home > h2::selection {
+    background-color: var(--heavy-gold);
+    color: var(--light-gold);
+}
+
+.trans {
+    height: 20vh;
+    width: 100vw;
+
+    position: absolute;
+    left: 0;
+
+}
+
+#trans1 {
+    top: 100vh;
+
+    background-image: linear-gradient(180deg, var(--light-gold) 10%, var(--heavy-gold) 90%);
+}
+
+#aboutMe {
+    background-color: var(--heavy-gold);
+    color: var(--gold);
+    font-size: 2em;
+
+    position: absolute;
+    top: 120vh;
+    left: 0;
+
+    width: 90vw;
+    padding: 5vw;
+    height: calc(100vh - 10vw);
+}
+
+#aboutMe > h2::selection, #aboutMe > * > p::selection {
+    background-color: var(--gold);
+    color: var(--heavy-gold);
+}
+
+#trans2 {
+    top: 220vh;
+
+    background-image: linear-gradient(180deg, var(--heavy-gold) 10%, var(--gold) 90%);
+}
+
+#work {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 240vh;
+    left: 0;
+
+    background-color: var(--gold);
+    color: var(--near-black);
+    font-size: 2em;
+}
+
+#work > h2 {
+    padding-left: 5vw;
+}
+
+#work > h2::selection, .workSec::selection {
+    background-color: var(--near-black);
+    color: var(--gold);
+}
+
+#workContainer {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.workSec {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 1000px 1000px rgba(170, 136, 102, 0.5);
+    transition: all 0.5s var(--quick-in);
+}
+
+.workSec:hover {
+    height: 150%;
+    font-weight: 700;
+    font-size: 2em;
+    box-shadow: inset 0 0 1000px 1000px rgba(170, 136, 102, 0.75);
+}
+
+#trans3 {
+    top: 340vh;
+
+    background-image: linear-gradient(180deg, var(--gold) 10%, var(--near-black) 90%);
+}
+
+#contactMe {
+    width: 95vw;
+    height: 100vh;
+    position: absolute;
+    top: 360vh;
+    left: 0;
+
+    background-color: var(--near-black);
+    color: var(--dark-gold);
+    font-size: 2em;
+    padding-left: 5vw;
+}
+
+#contactMe > h2::selection {
+    background-color: var(--dark-gold);
+    color: var(--near-black);
+}
+
+.contact {
+    height: 10vh;
+    margin-left: -15vw;
+    padding-left: 20vw;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 0 0 var(--dark-gold);
+    transition: all 0.5s var(--quick-in);
+}
+
+.contact:hover {
+    box-shadow: inset 25em 0 0 0 var(--dark-gold);
+}
+
+.contact > a {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    margin-left: -20vw;
+    padding-left: 20vw;
+    text-decoration: none;
+    color: var(--dark-gold);
+    font-size: 1.5em;
+    transition: all 0.5s var(--quick-in);
+}
+
+.contact > a:hover {
+    color: var(--near-black);
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.contact:hover > a::selection {
+    background-color: var(--near-black);
+    color: var(--dark-gold);
+}
+
+.contact > a::selection {
+    background-color: var(--dark-gold);
+    color: var(--near-black);
+}
+
+#contactDesc {
+    width: 100vw;
+    height: 50vh;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#contactText {
+    width: 60vw;
+    padding-right: 10vw;
+    color: var(--dark-gold);
+
+    transition: all 0.5s var(--quick-in);
+}

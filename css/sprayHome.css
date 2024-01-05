@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Pacers';
+    src: url('fonts/Pacers.woff2') format('woff2');
+}
+
+:root {
+    --pacers-gold: #fff201;
+    --pacers-blue: #00b0ef;
+    --pacers-black: #111;
+    --pacers-white: #eee;
+
+    --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
+}
+
+html {
+    font-family: "Pacers";
+}

@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Pacers';
+    src: url('fonts/Pacers.woff2') format('woff2');
+}
+
+:root {
+    --pacers-gold: #fff201;
+    --pacers-blue: #00b0ef;
+    --pacers-black: #111;
+    --pacers-white: #eee;
+
+    --quick-in: cubic-bezier(0, 0.75, 0.25, 1);
+}
+
+html {
+    font-family: "Pacers";
+}
+
+nav {
+    min-height: 5em;
+    height: 10vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--pacers-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#siteLogo {
+    height: 5em;
+    padding-left: 2vw;
+    aspect-ratio: 2.5;
+    content: url("img/sprayLogo.png");
+    transition: all 0.5 var(--quick-in);
+}
+
+#siteLogo:hover {
+    content: url("img/sprayHoverLogo.png");
+}
+
+nav > div {
+    display: flex;
+}
+
+nav > div > div {
+    height: 10vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    
+    color: var(--pacers-white);
+    font-size: 2.5em;
+
+    display: flex;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: inset 0 0 500px 10vh var(--pacers-black);
+
+    transition: all 0.5s var(--quick-in);
+}
+
+nav > div > div:hover {
+    color: var(--pacers-gold);
+    box-shadow: inset 0 0 500px 0 var(--pacers-black);
+}
+
+#homeNav {
+    background-image: url("img/gainbridge.jpg");
+}
+
+#aboutMeNav {
+    background-image: url("img/Sam.jpeg");
+}
+
+#contactMeNav {
+    background-image: url("img/email.jpg");
+}
